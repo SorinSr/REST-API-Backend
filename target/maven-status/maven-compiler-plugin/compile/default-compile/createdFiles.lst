@@ -1,11 +1,13 @@
 com\example\Controllers\CustomersController.class
-com\example\Services\CustomerService.class
 com\example\DAOs\CustomerDAOImpl.class
-com\example\Configs\DemoDispatcherServletInitializer.class
 com\example\DAOs\CustomerDAO.class
-com\example\Exceptions\ErrorResponse.class
 com\example\Aspect\ExceptionHandlerAspect.class
+com\example\Configs\SecurityWebApplicationInit.class
+com\example\Exceptions\CustomException.class
+com\example\Configs\DemoSecurityConfig.class
+com\example\Services\CustomerService.class
+com\example\Configs\DemoDispatcherServletInitializer.class
+com\example\Exceptions\ErrorResponse.class
 com\example\Configs\DemoAppConfig.class
 com\example\Services\CustomerServiceImpl.class
-com\example\Exceptions\CustomException.class
 com\example\Model\Customer.class
