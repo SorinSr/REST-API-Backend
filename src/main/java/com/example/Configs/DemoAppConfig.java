@@ -87,27 +87,27 @@ public class DemoAppConfig implements WebMvcConfigurer {
     }
 
 
-    @Bean
-    public DataSource securityDataSource() {
-        ComboPooledDataSource comboPooledSecurityDataSource = new ComboPooledDataSource();
-        try {
-            comboPooledSecurityDataSource.setDriverClass(environment.getProperty("security.jdbc.driver"));
-        } catch (PropertyVetoException e) {
-            e.printStackTrace();
-            throw new RuntimeException(e);
-        }
-
-        logger.info(">>SECURITY>> jdbc.url=" + environment.getProperty("security.jdbc.driver"));
-        logger.info(">>SECURITY>> jdbc.user=" + environment.getProperty("security.jdbc.user"));
-
-        comboPooledSecurityDataSource.setJdbcUrl(environment.getProperty("security.jdbc.url"));
-        comboPooledSecurityDataSource.setUser(environment.getProperty("security.jdbc.user"));
-        comboPooledSecurityDataSource.setPassword(environment.getProperty("security.jdbc.password"));
-
-        comboPooledSecurityDataSource.setInitialPoolSize(helperMethodConversionStringToInteger("security.connection.pool.initialPoolSize"));
-        comboPooledSecurityDataSource.setMinPoolSize(helperMethodConversionStringToInteger("security.connection.pool.minPoolSize"));
-        comboPooledSecurityDataSource.setMaxPoolSize(helperMethodConversionStringToInteger("security.connection.pool.maxPoolSize"));
-        comboPooledSecurityDataSource.setMaxIdleTime(helperMethodConversionStringToInteger("security.connection.pool.maxIdleTime"));
-        return comboPooledSecurityDataSource;
-    }
+//    @Bean
+//    public DataSource securityDataSource() {
+//        ComboPooledDataSource comboPooledSecurityDataSource = new ComboPooledDataSource();
+//        try {
+//            comboPooledSecurityDataSource.setDriverClass(environment.getProperty("security.jdbc.driver"));
+//        } catch (PropertyVetoException e) {
+//            e.printStackTrace();
+//            throw new RuntimeException(e);
+//        }
+//
+//        logger.info(">>SECURITY>> jdbc.url=" + environment.getProperty("security.jdbc.driver"));
+//        logger.info(">>SECURITY>> jdbc.user=" + environment.getProperty("security.jdbc.user"));
+//
+//        comboPooledSecurityDataSource.setJdbcUrl(environment.getProperty("security.jdbc.url"));
+//        comboPooledSecurityDataSource.setUser(environment.getProperty("security.jdbc.user"));
+//        comboPooledSecurityDataSource.setPassword(environment.getProperty("security.jdbc.password"));
+//
+//        comboPooledSecurityDataSource.setInitialPoolSize(helperMethodConversionStringToInteger("security.connection.pool.initialPoolSize"));
+//        comboPooledSecurityDataSource.setMinPoolSize(helperMethodConversionStringToInteger("security.connection.pool.minPoolSize"));
+//        comboPooledSecurityDataSource.setMaxPoolSize(helperMethodConversionStringToInteger("security.connection.pool.maxPoolSize"));
+//        comboPooledSecurityDataSource.setMaxIdleTime(helperMethodConversionStringToInteger("security.connection.pool.maxIdleTime"));
+//        return comboPooledSecurityDataSource;
+//    }
 }
